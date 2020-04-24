@@ -329,12 +329,13 @@
         signout.onclick = () => {
             signOut();
         }
+        var user = JSON.parse(sessionStorage.getItem("user"));
+        console.log(user.fullName);
+        fullName.value = user.fullName;
+        email.value = user.email;
+        showName.innerHTML = "Xin chào " + user.fullName;
         // btnSubmit.onclick = () => {
-        //     var user = JSON.parse(sessionStorage.getItem("user"));
-        //     console.log(user.fullName);
-        //     fullName.value = user.fullName;
-        //     email.value = user.email;
-        //     showName.innerHTML = "Xin chào " + user.fullName;
+
 
         //     var objectHistory = {};
         //     objectHistory.date = "24/4/2020";
