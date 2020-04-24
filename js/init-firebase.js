@@ -1,14 +1,14 @@
 var Dia_chi_Dich_vu = "http://localhost:1200/"
 
 // TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyCeLurZ9bpy4b2W7C88ansMuYh3KZ41lnE",
     authDomain: "hackcovy-29f03.firebaseapp.com",
     databaseURL: "https://hackcovy-29f03.firebaseio.com",
     projectId: "hackcovy-29f03",
     storageBucket: "hackcovy-29f03.appspot.com",
     messagingSenderId: "239367203055",
-    appId: "1:239367203055:web:6d62f6997c08274674131a"
+    appId: "1:239367203055:web:21f309c6190bc37074131a"
   };
 
 // Initialize Firebase
