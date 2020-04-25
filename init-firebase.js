@@ -32,11 +32,11 @@ function googleSignIn() {
         obj.phoneNumber = result.user.phoneNumber;
         obj.fullName = result.user.displayName;
         obj.pictureProfile = result.user.photoURL;
-        obj.historyAppointment = [];
+        obj.listReminder = [];
         sessionStorage.setItem("user",JSON.stringify(obj));
-        //Them_Benh_nhan(obj);
+        //Them_Nguoi_dung(obj);
         console.log(obj);
-        window.location.href="../book_an_appointment.html";
+        window.location.href="./home.html";
         // ...
     }).catch(function (error) {
         console.log(error)
@@ -56,32 +56,77 @@ function signOut()
 {
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
-        window.location.href="../index.html";
+        window.location.href="./index.html";
       }).catch(function(error) {
         // An error happened.
       });
 }
 
-function Them_Benh_nhan(BenhNhan) {
+function Them_Nguoi_dung(NguoiDung) {
     var Kq = ""
     var Xu_ly_HTTP = new XMLHttpRequest()
-    var Tham_so = `Ma_so_Xu_ly=Them_Benh_nhan`
+    var Tham_so = `Ma_so_Xu_ly=Them_Nguoi_dung`
     var Dia_chi_Xu_ly = `${Dia_chi_Dich_vu}?${Tham_so}`
     Xu_ly_HTTP.open("POST", Dia_chi_Xu_ly, false)
-    var Chuoi_goi = JSON.stringify(BenhNhan)
+    var Chuoi_goi = JSON.stringify(NguoiDung)
     Xu_ly_HTTP.send(Chuoi_goi)
     Kq = Xu_ly_HTTP.responseText
     return Kq
 }
 
-function Them_Lich_kham(BenhNhan) {
+function Them_Thong_bao(NguoiDung) {
     var Kq = ""
     var Xu_ly_HTTP = new XMLHttpRequest()
-    var Tham_so = `Ma_so_Xu_ly=Them_Lich_kham`
+    var Tham_so = `Ma_so_Xu_ly=Them_Thong_bao`
     var Dia_chi_Xu_ly = `${Dia_chi_Dich_vu}?${Tham_so}`
     Xu_ly_HTTP.open("POST", Dia_chi_Xu_ly, false)
-    var Chuoi_goi = JSON.stringify(BenhNhan)
+    var Chuoi_goi = JSON.stringify(NguoiDung)
     Xu_ly_HTTP.send(Chuoi_goi)
     Kq = Xu_ly_HTTP.responseText
     return Kq
+}
+
+function facebookSignIn()
+{
+    var providerFacebook = new firebase.auth.FacebookAuthProvider();
+
+    firebase.auth().signInWithPopup(providerFacebook).then(function(result) {
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        console.log(user);
+        // ...
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+}
+
+function githubSignIn()
+{
+    var providerGitHub = new firebase.auth.GithubAuthProvider();
+    firebase.auth().signInWithPopup(providerGitHub).then(function(result) {
+        // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        console.log(user);
+        // ...
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
 }
