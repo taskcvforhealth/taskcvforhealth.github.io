@@ -10,7 +10,7 @@ var firebaseConfig = {
     messagingSenderId: "239367203055",
     appId: "1:239367203055:web:21f309c6190bc37074131a"
   };
-
+  var getAlluser = Doc_Danh_sach_Nguoi_dung().Danh_sach_Nguoi_dung;
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 if(sessionStorage.getItem("user"))
@@ -21,16 +21,54 @@ if(sessionStorage.getItem("user"))
 
 function getAllInfoOfUser(email)
 {
-    var getAlluser = Doc_Danh_sach_Nguoi_dung().Danh_sach_Nguoi_dung;
+    var html = "";
+    var i = 0;
     getAlluser.forEach(user=>{
         if(user.Email.trim() == email.trim())
         {
             console.log(user);
+            user.ListReminder.forEach(reminder=>{
+                html += `<tr>
+                <td  scope="row"> ${reminder.Date}</td>
+               <td>${reminder.Diagnostic}</td>
+               <td>${reminder.ReExamination}</td>
+               <td>${reminder.Notes}</td>
+               <td>${reminder.Share}</td>
+             <td><button  type="button" class="btn btn-primary" onclick="viewListDrugs('${i}')" data-toggle="modal" data-target="#modelId" >Xem đơn thuốc</button></td>
+             </tr>`
+             i++;
+            });
+            
         }
         
     })
+
+    content.innerHTML = html;
 }
+ 
+function viewListDrugs(stt)
+{
+    var html = "";
+    console.log(stt)
+    getAlluser.forEach(user=>{
+        var userStore = JSON.parse(sessionStorage.getItem("user"));
+        if(user.Email == userStore.email)
+        {
+            user.ListReminder[stt].Drugs.forEach(drug=>{
+                html += `<tr>
+                <td  scope="row"> ${drug.DrugName}</td>
+               <td>${drug.Dosage}</td>
+               <td>${drug.Time}</td>
+               <td>${drug.Color}</td>
+               <td>${drug.AmountOfMedicine}</td>
+            </tr>`
+            })
+        }
         
+    })
+
+    contentDrugs.innerHTML = html;
+}
 
 function googleSignIn() {
     var provider = new firebase.auth.GoogleAuthProvider();

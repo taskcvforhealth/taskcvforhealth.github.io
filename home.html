@@ -104,22 +104,22 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>1</th>
-                                    <th>2</th>
-                                    <th>3</th>
+                                    <th>Ngày khám</th>
+                                    <th>Triệu chứng</th>
+                                    <th>Ngày tái khám</th>
+                                    <th>Notes</th>
+                                    <th>Chia sẻ</th>
+                                    <th>Hành động</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
+                            <tbody id="content">
+
+                                <!-- <tr>
                                     <td scope="row">1</td>
                                     <td>2</td>
                                     <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                </tr>
+                                </tr> -->
+                                
                             </tbody>
                         </table>
                     </div>
@@ -127,6 +127,53 @@
             </div>
         </div>
     </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Danh sách thuốc</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tên thuốc</th>
+                                <th>Liều uống</th>
+                                <th>Thời gian</th>
+                                <th>Màu sắc thuốc</th>
+                                <th>Số lượng</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contentDrugs">
+                            <tr>
+                                <td scope="row"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
     <!-- all js files -->
