@@ -1,136 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>Title</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- Site Metas -->
+<title>Dịch vụ đặt lịch khám online</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Site Icons -->
+<link rel="shortcut icon" href="images/fevicon.ico.png" type="image/x-icon" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Site CSS -->
+<link rel="stylesheet" href="style.css">
+<!-- Colors CSS -->
+<link rel="stylesheet" href="css/colors.css">
+<!-- ALL VERSION CSS -->
+<link rel="stylesheet" href="css/versions.css">
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/custom.css">
+<!-- Modernizer for Portfolio -->
+<script src="js/modernizer.js"></script>
+<!-- [if lt IE 9] -->
 </head>
 
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-1">
-
-      </div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-md-12">
-          <img id="pictureProfile"width= 100px src="" alt="" >
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="text" class="form-control" name="" id="email" aria-describedby="helpId" placeholder="">
-            </div>
-            <div class="form-group">
-              <label for="fullName">Họ tên</label>
-              <input type="text" class="form-control" name="" id="fullName" aria-describedby="helpId" placeholder="">
-            </div>
-            <div class="form-group">
-              <label for="phoneNumber">Số điện thoại</label>
-              <input type="text" class="form-control" name="" id="phoneNumber" aria-describedby="helpId" placeholder="">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="drugName">Tên thuốc</label>
-                  <input type="text" class="form-control" name="" id="drugName" aria-describedby="helpId" placeholder="">
-    
-                </div>
-                <div class="form-group">
-                  <label for="dosage">Liều lượng</label>
-                  <input type="text" class="form-control" name="" id="dosage" aria-describedby="helpId" placeholder="">
-    
-                </div>
-                <div class="form-group">
-                  <label for="time">Thời gian</label>
-                  <input type="text" class="form-control" name="" id="time" aria-describedby="helpId" placeholder="">
-    
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="amountOfMedicine">Số lượng thuốc dùng</label>
-                  <input type="text" class="form-control" name="" id="amountOfMedicine" aria-describedby="helpId"
-                    placeholder="">
-    
-                </div>
-                <div class="form-group">
-                  <label for="notes">Ghi chú</label>
-                  <input type="text" class="form-control" name="" id="notes" aria-describedby="helpId" placeholder="">
-    
-                </div>
-                <div class="form-group">
-                  <label for="share">Email chia sẻ</label>
-                  <input type="text" class="form-control" name="" id="share" aria-describedby="helpId" placeholder="">
-                </div>
-              </div>
-            </div>
-            
-            
-          </div>
-        </div>
-        <button type="button" id="save" class="btn btn-primary">Lưu</button>
-      </div>
-      <div class="col-md-1">
-
-      </div>
+<body class="clinic_version">
+    <!-- LOADER -->
+    <div id="preloader">
+        <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
     </div>
-  </div>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <!-- END LOADER -->
+    <header>
+        <div class="header-top wow fadeIn">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><strong>TaskCVForHealth</strong></a>
+                <div class="right-header">
+                    <div class="header-info">
+                        <div class="info-inner">
+                            <span class="icontop"><img src="images/phone-icon.png" alt="#"></span>
+                            <span class="iconcont"><a href="tel:800 123 456">0903026389</a></span>
+                        </div>
+                        <div class="info-inner">
+                            <span class="icontop"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <span class="iconcont"><a data-scroll
+                                    href="mailto:hackcovy@gmail.com">ForHealth@TaskCV.com</a></span>
+                        </div>
+                        <div class="info-inner">
+                            <span class="icontop"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                            <span class="iconcont"><a data-scroll href="#">Hoạt động 24/24</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom wow fadeIn">
+            <div class="container">
+                <nav class="main-menu">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars"
+                                aria-hidden="true"></i></button>
+                    </div>
 
-  <script defer src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
-  <script defer src="./init-firebase.js"></script>
-  <script>
-    // btnBookAnAppointment.onclick = () => {
-    //   googleSignIn();
-    // }
-    // signout.onclick = () => {
-    //   signOut();
-    // }
-    var user = JSON.parse(sessionStorage.getItem("user"));
-    console.log(user.fullName);
-    fullName.value = user.fullName;
-    email.value = user.email;
-    document.getElementById("pictureProfile").src = user.pictureProfile;
-    save.onclick = () => {
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a class="active" id="showName" data-scroll href="#about">Về chúng tôi</a></li>
+                            <li><a id="signout">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="serch-bar">
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control input-lg" placeholder="Search" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-info btn-lg" type="button">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
 
-      var reminder = {};
-      reminder.drugName = drugName.value;
-      reminder.dosage = dosage.value;
-      reminder.time = time.value;
-      reminder.amountOfMedicine = amountOfMedicine.value;
-      reminder.notes = notes.value;
-      reminder.share = share.value;
-      user.reminder = reminder;
 
-      Them_Thong_bao(user);
-    }
-  </script>
+    <div id="service" class="services wow fadeIn" style="margin-top: 7%;">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="appointment-form">
+                        <h3>Lịch sử khám</h3>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+    <!-- all js files -->
+    <script src="js/all.js"></script>
+    <!-- all plugins -->
+    <script src="js/custom.js"></script>
+    <!-- map -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+    <script defer src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+    <script defer src="/js/init-firebase.js"></script>
+    <script>
+        signout.onclick = () => {
+            signOut();
+        }
+        var user = JSON.parse(sessionStorage.getItem("user"));
+        console.log(user.fullName);
+        showName.innerHTML = "Xin chào " + user.fullName;
+        
+        getAllInfoOfUser(user.email);
+
+
+
+
+    </script>
 </body>
 
 </html>
